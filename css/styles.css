@@ -1,0 +1,42 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+button {
+  width: 150px;
+  padding: 15px 30px;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0 20px;
+}
+
+.button-container {
+  margin-bottom: 20px;
+}
+
+.canvas {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid {
+  background-color: #fff;
+  border: 1px solid #000;
+}
