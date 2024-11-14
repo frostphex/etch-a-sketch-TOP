@@ -1,0 +1,26 @@
+Problem Statement:
+  In this project, a browser version of a sketchpad and an etch-a-sketch needs to be made. In this project, a 16x16 grid is generated using JavaScript on a canvas. When a mouse over any of the grid a random color is generated for that div coloring it, A button needs to be setup for entering user choice grid in the given canvas, the grid will be divided equally in to fit in that canvas and replaced by the default 16x16 grid. The max grid limit will be 100 as more than 100x100 grid can utilize computers resources through browser. With each hovering, the color of the a single grid darken achieving a black color dark effect using rgba() function.
+
+SET canvas TO CREATE ELEMENT 'div'
+SET canvas.className TO 'canvas'
+APPEND canvas TO document.body
+
+FUNCTION generateGrid(size=16)
+  // Calculate the size of each square, based on the smaller dimension (width or height)
+  SET squareSize To Math.floor(Math.min(canvas.offsetWidth, canvas.offsetHeight) / gridSize)
+
+  FOR I = 0 TO size * size
+    SET grid = CREATE ELEMENT 'div'
+    SET grid.style.width TO squareSize px
+    SET grid.style.height TO squareSize px
+    SET grid.className TO 'grid'
+    APPEND grid to canvas
+
+FUNCTION generateRandomNumber()
+  RETURN Math.floor(Math.random() * 255)
+
+SET grids TO all grid classes
+For grids OF grid
+  SET grid TO mouseover event listener and a CALLBACk function
+  CALL generateRandomNumber ON grid.css.color
+
